@@ -10,6 +10,13 @@
 
 .wrapper {
   box-sizing: border-box;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: white;
+}
+
+footer {
+  text-align:center;
 }
 
 *,
