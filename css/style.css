@@ -8,11 +8,36 @@
   --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 }
 
+nav ul li {
+  display: inline-flex;
+}
+
 .wrapper {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 1em;
   background-color: white;
+}
+
+#intro > .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#add-to-cart{
+  background-color: black ;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1em;
+}
+
+.main-img {
+  grid-column: 1/-1;
 }
 
 footer {
@@ -31,6 +56,7 @@ html {
   color: #222;
   scroll-behavior: smooth;
   line-height: 1.4;
+  margin: 1rem;
 }
 
 body {
@@ -40,18 +66,51 @@ body {
 img {
   display: block;
   max-width: 100%;
+  box-sizing: border-box;
+  border-radius: .5rem;
 }
 
-@media (min-width:60em) {
+.pull-quotes {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width:768px) {
   .grid {
-    grid-template-columns: 1fr,1fr,1fr,1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-img{
+    grid-column: 1;
+  }
+
+  .dough-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  .ice-cream-flavours {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  .pull-quotes {
+    flex-direction: row;
   }
 }
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1em;
+
+
+@media (min-width:960px) {
+  #intro > .wrapper{
+    flex-direction: row;
+  }
 }
+
+div img {
+  display: flex;
+}
+
 
 
