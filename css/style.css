@@ -10,6 +10,9 @@
 
 nav ul li {
   display: inline-flex;
+  padding-left: 15px;
+  align-items: baseline;
+  align-content: flex-end;
 }
 
 .wrapper {
@@ -23,6 +26,10 @@ nav ul li {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+h3 {
+  text-align: center;
 }
 
 #add-to-cart{
@@ -75,6 +82,20 @@ img {
   flex-direction: column;
 }
 
+#ice-cream-flavours {
+  text-align: center;
+  background-color: lightgrey;
+}
+
+div > .card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: baseline;
+
+ } 
+
+
 
 @media (min-width:768px) {
   .grid {
@@ -99,8 +120,8 @@ img {
   .pull-quotes {
     flex-direction: row;
   }
-}
 
+}
 
 @media (min-width:960px) {
   #intro > .wrapper{
@@ -110,6 +131,10 @@ img {
 
 div img {
   display: flex;
+}
+
+#dough-info {
+  gap: 2rem;
 }
 
 
