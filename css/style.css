@@ -28,8 +28,10 @@ nav ul {
 #header > div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
 }
+
+/* Don't remember how to align the content in the header to align at the top of the page. */
 
 nav ul {
   list-style-type: none;
@@ -54,6 +56,12 @@ nav ul li a:visited {
   padding: 1em;
   background-color: white;
 }
+
+section > .pull-quotes {
+  background-color: #000;
+}
+
+/* It wont allow me to change background colours. I've tried multiple ways to change it.  */
 
 #intro > .wrapper {
   display: flex;
@@ -92,7 +100,6 @@ footer {
 
 html {
   font-family:'Poppins', sans-serif;
-  /* background-color: #fff; */
   color: #222;
   scroll-behavior: smooth;
   line-height: 1.4;
@@ -117,16 +124,23 @@ img {
 
 #ice-cream-flavours {
   text-align: center;
-  background-color: lightgrey;
 }
+
+
 
 div > .card{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
  } 
 
+@media (min-wider: 502px) {
+  .card {
+    grid-column: 1fr 1fr;
+  }
 
+  /* Can't figure out how to align the cards to align in a square when transforming down to mobile streen */
+}
 
 @media (min-width:768px) {
   .grid {
@@ -142,10 +156,8 @@ div > .card{
     grid-template-columns: 1fr 1fr;
   }
 
-  #ice-cream-flavours {
+  .ice-cream-flavours {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: ;
   }
   
   .pull-quotes {
@@ -156,6 +168,11 @@ div > .card{
 @media (min-width:960px) {
   #intro > .wrapper{
     flex-direction: row;
+  }
+
+  .ice-cream-flavours {
+    display: flex;
+    flex-direction: column;
   }
 }
 
