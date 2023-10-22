@@ -134,9 +134,9 @@ div > .card{
   gap: 1rem;
  } 
 
-@media (min-wider: 502px) {
+@media (min-width: 502px) {
   .card {
-    grid-column: 1fr 1fr;
+    flex-direction: row;
   }
 
   /* Can't figure out how to align the cards to align in a square when transforming down to mobile streen */
